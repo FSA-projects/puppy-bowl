@@ -57,7 +57,7 @@ main {
 #deletePlayerForm {
     border: 3px solid black;
     padding: 1em;
-    margin: 2em;
+    margin: .3em;
     background-color: lavender;
     border-radius: 15px;
     display: flex;
