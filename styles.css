@@ -8,7 +8,6 @@ header {
     color: goldenrod;
     background-color: white;
 }
-}
 
 h1 {
     text-align: center;
@@ -27,17 +26,47 @@ main {
     padding: 1em;
 }
 
-#roster {
-    background-color: white;
-    text-align: center;
-}
-
-#addPlayerForm {
+.player-card {
+    width: calc(33.33% - 20px);
+    max-width: 20%;
+    margin: 10px;
     border: 3px solid black;
     padding: 2em;
-    margin: 2em;
     background-color: lavender;
-    border-radius: 15px
+    border-radius: 15px;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 350px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#roster {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#addPlayerForm,
+#deletePlayerForm {
+    border: 3px solid black;
+    padding: 2em;
+    background-color: lavender;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addPlayerForm label,
+#deletePlayerForm label {
+    text-align: center;
+    width: 100%;
 }
 
 #addPlayerForm input,
@@ -47,4 +76,18 @@ main {
     padding: 2%;
     display: block;
     width: 100%;
+}
+
+#deletePlayerForm input {
+    width: 70%;
+    margin: 2%;
+    display: block;
+    padding: 2%;
+}
+
+#deletePlayerForm button {
+    margin: 2%;
+    padding: 2%;
+    display: block;
+    width: 70%;
 }

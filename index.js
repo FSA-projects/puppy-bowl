@@ -4,9 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2310-FSA-ET-WEB-FT-SF/players');
             const result = await response.json();
-            displayPlayers(result.data.players);
+
+            const reversedPlayers = result.data.players.reverse();
+
+            const limitedPlayers = reversedPlayers.slice(0, 21);
+
+            displayPlayers(limitedPlayers);
         } catch (error) {
-            console.log('OOPS.... that link is broken!');
+            window.alert('OOPS.... that link is broken!');
         }
     };
 
@@ -14,18 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
         rosterSection.innerHTML = '';
         players.forEach(player => {
             const playerCard = document.createElement('div');
+            playerCard.classList.add('player-card');
             playerCard.innerHTML = `
             <h3>${player.name.toUpperCase()}</h3>
+            <p>Contestant ID: ${player.id}</p>
             <p>Breed: ${player.breed.toUpperCase()}</p>
             <p>Status: ${player.status.toUpperCase()}</p>
             <img src="${player.imageUrl}" alt="A picture of the puppy bowl contestant ${player.name}" 
-            style="width: 350px; height: 350px;">
+            style="width: 100%; max-width: 350px; height: auto;">
         `;
             rosterSection.appendChild(playerCard);
         });
     };
 
     fetchPlayers();
+
     const addPlayer = async (puppyPlayer) => {
         try {
             const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2310-FSA-ET-WEB-FT-SF/players', {
@@ -35,11 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify(puppyPlayer)
             });
-            const result = await response.json();
-
         } catch (error) {
-            console.log('Cannot add player at this time.');
+            window.alert('Cannot add player at this time.');
         }
+        fetchPlayers();
     };
 
     document.getElementById('addPlayerForm').addEventListener('submit', (event) => {
@@ -59,5 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         addPlayer(playerData);
     });
-});
 
+
+    document.getElementById('deletePlayerForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const deletePlayerId = document.getElementById('deletePlayerId').value;
+
+        try {
+            const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2310-FSA-ET-WEB-FT-SF/players/${deletePlayerId}`, {
+                method: 'DELETE',
+            });
+            fetchPlayers();
+        } catch (error) {
+            window.alert('Cannot delete player');
+        }
+
+    })
+});

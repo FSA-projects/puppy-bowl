@@ -10,9 +10,9 @@
   <h1>Puppy Bowl Roster</h1>
 </header>
 <main>
-  <section id="addPlayerSection">
+  <section id="addPlayerSection" class="form-container">
     <form id="addPlayerForm">
-      <h2>Add a New Player</h2>
+      <h2>Add Contestant</h2>
       <input type="text" id="playerName" name="playerName" placeholder="Player Name" required>
       <input type="text" id="playerBreed" name="playerBreed" placeholder="Player Breed" required>
       <input type="url" id="playerImageUrl" name="playerImageUrl" placeholder="Image URL">
@@ -21,7 +21,15 @@
         <option value="field">Field</option>
         <option value="bench">Bench</option>
       </select>
-      <button type="submit">Add Player</button>
+      <button type="submit">Add Contestant</button>
+    </form>
+  </section>
+  <section id="deletePlayerSection" class="form-container">
+    <form id="deletePlayerForm">
+      <h2>Remove contestant</h2>
+      <label for="deletePlayerId">Contestant ID to remove:</label>
+      <input type="text" id="deletePlayerId" name="deletePlayerId" placeholder="Contestant ID" required>
+      <button type="submit">Remove Player</button>
     </form>
   </section>
   <section id="roster">
