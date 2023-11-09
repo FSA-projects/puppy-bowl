@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const reversedPlayers = result.data.players.reverse();
 
-            const limitedPlayers = reversedPlayers.slice(0, 21);
+            const mostRecentPlayers = reversedPlayers.slice(0, 21);
 
-            displayPlayers(limitedPlayers);
+            displayPlayers(mostRecentPlayers);
         } catch (error) {
             window.alert('OOPS.... that link is broken!');
         }
