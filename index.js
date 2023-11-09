@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Breed: ${player.breed.toUpperCase()}</p>
             <p>Status: ${player.status.toUpperCase()}</p>
             <img src="${player.imageUrl}" alt="A picture of the puppy bowl contestant ${player.name}" 
-            style="width: 100%; max-width: 350px; height: auto;">
+            style="width: auto; max-width: 350px; height: auto; max-height:350px;">
         `;
             rosterSection.appendChild(playerCard);
         });
