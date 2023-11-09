@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2310-FSA-ET-WEB-FT-SF/players');
             const result = await response.json();
-            // console.log(result);
             displayPlayers(result.data.players);
         } catch (error) {
             console.log('OOPS.... that link is broken!');
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const displayPlayers = (players) => {
         rosterSection.innerHTML = '';
-        // console.log('Players to display:', players);
         players.forEach(player => {
             const playerCard = document.createElement('div');
             playerCard.innerHTML = `
@@ -40,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
 
         } catch (error) {
-            console.log('Error adding player:');
+            console.log('Cannot add player at this time.');
         }
     };
 
