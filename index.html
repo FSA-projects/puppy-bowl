@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FSA Puppy Bowl</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Puppy Bowl Roster</h1>
+</header>
+<main>
+  <section id="addPlayerSection">
+    <form id="addPlayerForm">
+      <h2>Add a New Player</h2>
+      <input type="text" id="playerName" name="playerName" placeholder="Player Name" required>
+      <input type="text" id="playerBreed" name="playerBreed" placeholder="Player Breed" required>
+      <input type="url" id="playerImageUrl" name="playerImageUrl" placeholder="Image URL">
+      <select id="playerStatus" name="playerStatus">
+        <option value="">Playing Status</option>
+        <option value="field">Field</option>
+        <option value="bench">Bench</option>
+      </select>
+      <button type="submit">Add Player</button>
+    </form>
+  </section>
+  <section id="roster">
+  </section>
+</main>
+<script src="index.js"></script>
+</body>
+</html>
