@@ -56,7 +56,8 @@ main {
 #addPlayerForm,
 #deletePlayerForm {
     border: 3px solid black;
-    padding: 2em;
+    padding: 1em;
+    margin: 2em;
     background-color: lavender;
     border-radius: 15px;
     display: flex;
@@ -68,12 +69,13 @@ main {
 #deletePlayerForm label {
     text-align: center;
     width: 100%;
+    margin: .4em;
 }
 
 #addPlayerForm input,
 #addPlayerForm button,
 #addPlayerForm select {
-    margin: 2%;
+    margin: .4em;
     padding: 2%;
     display: block;
     width: 100%;
@@ -81,13 +83,13 @@ main {
 
 #deletePlayerForm input {
     width: 70%;
-    margin: 2%;
+    margin: .4em;
     display: block;
     padding: 2%;
 }
 
 #deletePlayerForm button {
-    margin: 2%;
+    margin: .4em;
     padding: 2%;
     display: block;
     width: 70%;
