@@ -1,0 +1,132 @@
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    color: goldenrod;
+    background-image: url("https://media.istockphoto.com/id/1290524888/vector/seamless-pattern-of-cute-dog-puppy-symbol.jpg?s=612x612&w=0&k=20&c=YmtM00PuP7khlFG7q1cMkR330PBPlGKOTKzSy-w6pIY=");
+}
+
+header {
+    color: goldenrod;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    padding: 1em;
+    background-color: lavender;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.player-card {
+    width: 23%;
+    max-width: 20%;
+    margin: 10px;
+    border: 3px solid black;
+    padding: 2em;
+    background-color: lavender;
+    border-radius: 15px;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 350px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#roster {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#addPlayerForm,
+#deletePlayerForm {
+    border: 3px solid black;
+    padding: 1em;
+    margin: .3em;
+    background-color: lavender;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addPlayerForm label,
+#deletePlayerForm label {
+    text-align: center;
+    width: 100%;
+    margin: .7em;
+}
+
+#addPlayerForm input,
+#addPlayerForm button,
+#addPlayerForm select {
+    margin: .7em;
+    padding: 2%;
+    display: block;
+    width: 100%;
+}
+
+#addPlayerForm button[type="submit"],
+#deletePlayerForm button[type="submit"] {
+    background-color: goldenrod;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addPlayerForm input[type="text"],
+#addPlayerForm input[type="url"],
+#addPlayerForm select,
+#deletePlayerForm input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#addPlayerForm input[type="text"]:focus,
+#addPlayerForm input[type="url"]:focus,
+#addPlayerForm select:focus,
+#deletePlayerForm input[type="text"]:focus {
+    outline: none;
+    border: 1px solid goldenrod;
+    box-shadow: 0 0 5px goldenrod;
+}
+
+#addPlayerForm select {
+    appearance: none;
+    padding: 10px;
+    margin: .7em;
+}
+
+#deletePlayerForm input {
+    width: 70%;
+    margin: .4em;
+    display: block;
+    padding: 2%;
+}
+
+#deletePlayerForm button {
+    margin: .4em;
+    padding: 2%;
+    display: block;
+    width: 70%;
+}
